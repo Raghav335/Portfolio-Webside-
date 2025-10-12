@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Raghav Gupta — Web Developer</title>
+  <meta name="description" content="Portfolio of Raghav Gupta — Web Developer / BCA Student" />
+  <link rel="preconnect" href="https://fonts.raghavgupta805288@gmail.com" crossorigin>
+  <link href="https://fonts.raghavgupta805288@gmail.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <div class="logo">RG</div>
+        <div class="brand-text">
+          <span class="name">Raghav Gupta</span>
+          <span class="title">Web Developer · BCA Student</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi, I’m <span class="accent">Raghav</span>.</h1>
+          <p class="lead">I build modern, responsive web applications. I’m a BCA student focusing on front-end development with react and angular.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="profile-photo" aria-hidden="true">
+            <!-- simple gradient avatar -->
+            <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="160" height="160" rx="20" fill="url(#g)"/>
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#6b21a8"/>
+                  <stop offset="1" stop-color="#0ea5a0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="profile-meta">
+            <h3>Raghav Gupta</h3>
+            <p>Web Developer · BCA Student</p>
+            <div class="socials">
+              <a href="mailto yraghavgupta805288@gmail.com" title="Email">✉️</a>
+              <a href="https://github.com/Raghav335" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+              <a href="https://linkedin.com/in/raghav-gupta" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <p>I am a BCA student passionate about front-end development. I enjoy turning ideas into user-friendly interfaces. I like learning new frameworks and improving accessibility and performance in web apps.</p>
+          <ul class="about-list">
+            <li><strong>Education:</strong> BCA (in progress)</li>
+            <li><strong>Interests:</strong> Web Development, UI/UX, Open Source</li>
+            <li><strong>Tools:</strong> VS Code, Git, Chrome DevTools</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h4>HTML & CSS</h4>
+            <div class="progress"><span style="width:95%"></span></div>
+          </div>
+          <div class="skill">
+            <h4>JavaScript</h4>
+            <div class="progress"><span style="width:85%"></span></div>
+          </div>
+          <div class="skill">
+            <h4>React (basics)</h4>
+            <div class="progress"><span style="width:70%"></span></div>
+          </div>
+          <div class="skill">
+            <h4>Responsive Design</h4>
+            <div class="progress"><span style="width:90%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="muted">A few sample projects — replace these with your own GitHub links and descriptions.</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>To-Do App</h3>
+            <p>Simple to-do application with add/edit/delete and localStorage persistence.</p>
+            <div class="card-actions">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener">View</a>
+              <a href="#" class="btn-sm ghost" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Calculator</h3>
+            <p>Responsive calculator built with plain JavaScript and keyboard support.</p>
+            <div class="card-actions">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener">View</a>
+              <a href="#" class="btn-sm ghost" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Animal Welfare Dashboard</h3>
+            <p>Demo dashboard layout for NGO management and rescue operations (UI prototype).</p>
+            <div class="card-actions">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener">View</a>
+              <a href="#" class="btn-sm ghost" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Get in touch</h3>
+            <p>Prefer email? Use the form or send a message directly.</p>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto: raghavgupta805288@gmail.com.">raghavgupta805288@gmail.com</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/Raghav335" target="_blank" rel="noopener">github.com/Raghav335</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/raghav-gupta" target="_blank" rel="noopener">linkedin.com/in/raghav-gupta</a></li>
+            </ul>
+          </div>
+
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/{raghavgupta805288@gmail.com}" method="POST">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required placeholder="Write a short message..."></textarea>
+            </label>
+            <div class="form-row">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="reset" class="btn ghost">Reset</button>
+            </div>
+            <p class="muted small">This form is wired to Formspree by default — replace the action with your endpoint or remove the `action` to handle it via JS.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Raghav Gupta · Built with ❤️</p>
+      <p class="muted"raghavgupta805288@gmail.com <code>index.html</code> with your real profiles before publishing.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
