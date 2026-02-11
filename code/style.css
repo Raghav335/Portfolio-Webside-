@@ -1,3 +1,17 @@
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #6b21a8;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 :root{
   --bg:#0b0f12;
   --card:#0f1720;
