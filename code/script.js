@@ -1,78 +1,226 @@
-// Basic interactions: mobile menu, smooth scroll, theme toggle, contact form
-(function () {
-  const menuToggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('nav');
-  const themeToggle = document.getElementById('themeToggle');
-  const yearEl = document.getElementById('year');
+// ==========================
+// PORTFOLIO SCRIPT
+// ==========================
 
-  // Year in footer
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+// Footer Year
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Mobile menu toggle
-  menuToggle && menuToggle.addEventListener('click', function () {
-    nav.classList.toggle('open');
-    menuToggle.textContent = nav.classList.contains('open') ? '✕' : '☰';
-  });
 
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href').slice(1);
-      if (!targetId) return;
-      const target = document.getElementById(targetId);
-      if (target) {
+// ==========================
+// Mobile Menu
+// ==========================
+
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.querySelector(".nav-list");
+
+menuToggle.addEventListener("click", () => {
+
+    nav.classList.toggle("active");
+
+    menuToggle.innerHTML =
+        nav.classList.contains("active") ? "✖" : "☰";
+
+});
+
+
+// ==========================
+// Smooth Scroll
+// ==========================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Close mobile nav after click
-        if (nav.classList.contains('open')) {
-          nav.classList.remove('open');
-          menuToggle.textContent = '☰';
-        }
-      }
-    });
-  });
 
-  // Theme toggle: light/dark — stored in localStorage
-  const THEME_KEY = 'portfolio_theme';
-  function applyTheme(theme) {
-    if (theme === 'light') {
-      document.documentElement.style.setProperty('--bg', '#f6f8fb');
-      document.documentElement.style.setProperty('--card', '#ffffff');
-      document.documentElement.style.setProperty('--text', '#071422');
-      document.documentElement.style.setProperty('--muted', '#5b6b76');
-      themeToggle.textContent = '🌙';
-    } else {
-      document.documentElement.style.setProperty('--bg', '#0b0f12');
-      document.documentElement.style.setProperty('--card', '#0f1720');
-      document.documentElement.style.setProperty('--text', '#e6eef6');
-      document.documentElement.style.setProperty('--muted', '#9aa3ad');
-      themeToggle.textContent = '☀️';
+        document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        nav.classList.remove("active");
+
+        menuToggle.innerHTML = "☰";
+
+    });
+
+});
+
+
+// ==========================
+// Dark / Light Mode
+// ==========================
+
+const themeBtn = document.getElementById("themeToggle");
+
+themeBtn.onclick = () => {
+
+    document.body.classList.toggle("light");
+
+    if(document.body.classList.contains("light")){
+
+        themeBtn.innerHTML="🌙";
+
     }
-  }
 
-  // initialize
-  const saved = localStorage.getItem(THEME_KEY) || 'dark';
-  applyTheme(saved);
+    else{
 
-  themeToggle && themeToggle.addEventListener('click', function () {
-    const current = localStorage.getItem(THEME_KEY) || 'dark';
-    const next = current === 'dark' ? 'light' : 'dark';
-    localStorage.setItem(THEME_KEY, next);
-    applyTheme(next);
-  });
+        themeBtn.innerHTML="☀";
 
-  // Contact form: simple client-side validation & success message (if using no backend)
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      // If action is empty or default Formspree placeholder, show a friendly message and prevent submit
-      const action = form.getAttribute('action') || '';
-      if (action.includes('{your-id}') || action.trim() === '') {
-        e.preventDefault();
-        alert('Replace the form action with your Formspree endpoint or handle the form via JavaScript. (This is a demo message.)');
-        return;
-      }
-      // otherwise allow default submit
-    });
-  }
-})();
+    }
+
+}
+
+
+// ==========================
+// Typing Animation
+// ==========================
+
+const roles=[
+
+"Full Stack Developer",
+
+"Backend Developer",
+
+"MERN Stack Developer",
+
+"Node.js Developer"
+
+];
+
+let roleIndex=0;
+
+let charIndex=0;
+
+let typing=true;
+
+const typingElement=document.querySelector(".typing");
+
+function typeEffect(){
+
+if(!typingElement) return;
+
+if(typing){
+
+typingElement.textContent=roles[roleIndex].substring(0,charIndex++);
+
+if(charIndex>roles[roleIndex].length){
+
+typing=false;
+
+setTimeout(typeEffect,1200);
+
+return;
+
+}
+
+}
+
+else{
+
+typingElement.textContent=roles[roleIndex].substring(0,charIndex--);
+
+if(charIndex===0){
+
+typing=true;
+
+roleIndex=(roleIndex+1)%roles.length;
+
+}
+
+}
+
+setTimeout(typeEffect,typing?120:60);
+
+}
+
+typeEffect();
+
+
+// ==========================
+// Scroll Animation
+// ==========================
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".section,.project-card,.skill-card,.achievement-card").forEach(el=>{
+
+el.classList.add("hidden");
+
+observer.observe(el);
+
+});
+
+
+// ==========================
+// Active Navbar
+// ==========================
+
+const sections=document.querySelectorAll("section");
+
+const navLinks=document.querySelectorAll(".nav-list a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-150;
+
+if(scrollY>=top){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+
+// ==========================
+// Contact Form
+// ==========================
+
+const form=document.querySelector(".contact-form");
+
+if(form){
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+alert("✅ Thank you for contacting me! I will get back to you soon.");
+
+form.reset();
+
+});
+
+}
