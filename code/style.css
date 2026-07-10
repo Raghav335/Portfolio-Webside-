@@ -162,3 +162,42 @@ html,body{
 
 /* small focus styles */
 a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(110,23,165,0.15);outline-offset:2px}
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:.8s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.nav-list.active{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:20px;
+background:#111827;
+padding:20px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.nav-list a.active{
+color:#3b82f6;
+font-weight:bold;
+}
+
+.typing{
+color:#3b82f6;
+min-height:35px;
+font-weight:700;
+}
+
+.light{
+background:#f5f5f5;
+color:#111;
+}
