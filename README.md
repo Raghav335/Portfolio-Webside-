@@ -1,39 +1,112 @@
+<h1 align="center">Hi 👋, I'm Raghav Gupta</h1>
 
+<h3 align="center">
+Full Stack Developer • MERN Stack • BCA Final Year Student
+</h3>
 
-# Portfolio Website — Raghav Gupta
-
-A clean, responsive portfolio website built with **HTML**, **CSS**, and **JavaScript** (no build tools).  
-Perfect to publish on GitHub Pages or use as a starting point for your portfolio.
-
-## Files
-- `index.html` — main page
-- `style.css` — styles (dark theme by default)
-- `script.js` — interactions (menu, theme toggle, smooth scroll)
-- `README.md` — this file
-
-## How to use
-1. Create a new GitHub repository (e.g., `portfolio`).
-2. Add these files to the repo root.
-3. Edit `index.html`:
-   - Replace name/title/contact links (email, GitHub, LinkedIn).
-   - Update Projects section with your projects and correct links.
-   - Optionally set your Formspree form `action` or wire the form to your backend.
-4. Commit and push.
-5. (Optional) Enable GitHub Pages in repo settings (choose `main` branch, `/ (root)`).
-
-## Customization tips
-- Replace placeholder avatar with your photo (inside `.hero-card .profile-photo` or as an `<img>`).
-- Add more projects — copy the `.project-card` markup.
-- Consider adding analytics, more pages, or a blog later.
-
-## License
-You can reuse and modify this template for personal and commercial projects. Attribution is appreciated but not required.
+<p align="center">
+Building scalable web applications, solving real-world problems, and continuously learning modern technologies.
+</p>
 
 ---
 
-If you want, I can:
-- Replace placeholders with your actual name, email and social links.
-- Add more project cards using your GitHub repo links.
-- Prepare the repo structure and a `.gitignore` or a deploy-ready branch for GitHub Pages.
+## 👨‍💻 About Me
 
-Tell me which changes you'd like and I’ll update the files instantly.
+I'm a passionate **Full Stack Developer** pursuing my **Bachelor of Computer Applications (Final Year)**. I enjoy designing and developing modern web applications with clean architecture, responsive user interfaces, and efficient backend systems.
+
+I believe technology should solve real-world problems, and every project I build helps me become a better engineer.
+
+- 💻 Full Stack Web Developer (MERN)
+- 🌱 Currently learning **Advanced MERN, Python, Java & Data Structures**
+- 🚀 Interested in Software Engineering, Web Development & Open Source
+- 🤝 Open to internships, collaborations and exciting projects
+- ⚡ Always learning something new
+
+---
+
+## 🛠 Tech Stack
+
+### Languages
+JavaScript • Python • Java • C
+
+### Frontend
+React.js • HTML5 • CSS3 • Tailwind CSS • Bootstrap
+
+### Backend
+Node.js • Express.js • REST API
+
+### Database
+MongoDB • Firebase • MySQL
+
+### Tools
+Git • GitHub • VS Code • Postman • Vercel • npm
+
+---
+
+## 🚀 Featured Projects
+
+### 💰 Expense Tracker with Budget Insights
+A modern expense management application with analytics, charts and budget insights.
+
+### 📊 Social Media Dashboard
+A responsive dashboard with analytics, reusable components and modern UI.
+
+### 💬 Real-Time Chat Application
+Real-time messaging platform built using Socket.IO and the MERN Stack.
+
+### 🌐 Personal Portfolio
+A modern portfolio showcasing my skills, projects and development journey.
+
+---
+
+## 🏆 Achievements
+
+🏅 AI Hack Matrix Hackathon Finalist
+
+👨‍💼 Team Leader – CarePaws
+
+💻 Developed multiple Full Stack Web Applications
+
+---
+
+## 📜 Certifications
+
+• CCC
+
+• Artificial Intelligence Workshop
+
+• Web Development Workshop
+
+• Machine Learning Workshop
+
+• Data Science Workshop
+
+• Tally
+
+---
+
+## 📫 Connect With Me
+
+📧 **Email**
+> raghavgupta805288@gmail.com
+
+💼 **LinkedIn**
+> linkedin.com/in/raghav-gupta-8a9152328
+
+🌍 **Portfolio**
+> https://portfolio-webside-c9yp.vercel.app/code/
+
+💻 **GitHub**
+> github.com/Raghav335
+
+---
+
+## 💭 Philosophy
+
+> *"Great software isn't built overnight. It's built through consistency, curiosity, and continuous improvement."*
+
+---
+
+<p align="center">
+Thanks for visiting my profile ❤️
+</p>
